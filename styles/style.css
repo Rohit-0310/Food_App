@@ -1,0 +1,36 @@
+#navbar {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    padding-left: 4%;
+    padding-right: 4%;
+    border: solid 2px black;
+    border-radius: 20px;
+}
+
+#options {
+    display: flex;
+    justify-content: space-between;
+}
+
+#options h3 {
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+img{
+      width: 80%;
+  }
+#container{
+
+    display: grid;
+    grid-template-columns:  repeat(4, 25%);
+    grid-gap: 20px;
+    justify-content: center;
+    padding: 5%;
+    margin-left: 5%;
+    border: 2px solid red;
+  }
+  #meals_Search{
+      width: 20%;
+  }

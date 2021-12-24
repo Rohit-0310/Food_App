@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Receipe of the day</title>
+    </head>
+  <link rel="stylesheet" href="/styles/style.css" />
+    <body>
+		<div id="navbar"></div>        
+        <h1 style="text-align: center; color:dimgray">Random Receipe</h1>
+		<div id="container"></div>
+
+	</body>
+</html>
+
+<script type="module">
+	import navbar from "./components/navbar.js";
+    import { getData, append } from "./scripts/showData.js"
+
+	let navbar_div = document.getElementById("navbar");
+
+	navbar_div.innerHTML = navbar();
+	//https://www.themealdb.com/api/json/v1/1/categories.php
+	let response = getData("https://www.themealdb.com/api/json/v1/1/categories.php");
+
+	response
+	.then((res) => {
+		let container = document.getElementById("container");
+
+		append(res, container);
+	})
+	.catch((err) => {
+		console.log("err:", err)
+	});
+</script>
+
+
+
+
+
